@@ -1,2 +1,2 @@
-# RehabilitationConsolGame
+# RehabilitationConsoleGame
 リハビリがてらコンソールだけでゲーム作ってみたい
