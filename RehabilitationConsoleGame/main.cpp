@@ -1,8 +1,15 @@
-#include <iostream>
+#include "Menu.hpp"
+
+
 
 int main()
 {
-	std::cout << "Test" << std::endl;
+	Menu m_menu = Menu();
 
-	return 0;
+	if (m_menu.Update() == 0)
+	{
+		return 0;
+	}
+
+
 }
