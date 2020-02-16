@@ -34,18 +34,19 @@ int Menu::Update()
 	}
 
 
-	// セーブファイルがあった場合、消すか使うかどうか
+	// 前回データがあった場合、消すか使うかどうか
 	if (m_isSaveFileHave)
 	{
 		m_entirety = -1;
 
 		SleepBar();
 		SleepCout("前回データが あります。");
-		SleepCout("引き続き やりますか？");
+		SleepCout("タスクは 完了しましたか？");
 		SleepCout("消して 最初から やりますか？");
+		SleepCout("それとも タスクに 追加しますか？");
 		SleepNull();
-		SleepCout("続けるなら 1を");
-		SleepCout("消すなら 0を");
+		SleepCout("タスクに 追加するなら 1を");
+		SleepCout("全部 消すなら 0を");
 		while (true)
 		{
 			InputFail(m_entirety);
@@ -56,6 +57,15 @@ int Menu::Update()
 			}
 			else break;
 		}
+
+
+		if (m_entirety == 0)
+		{
+			std::vector<std::vector<std::string>> map;
+			map.clear();
+
+			if (!FileReaderWrite::FileCSVWrite("save.csv", map)) return -1;
+		}
 	}
 
 
@@ -64,10 +74,11 @@ int Menu::Update()
 
 
 	// 空白
-	for (int i = 0; i != 4; ++i)
+	for (int i = 0; i != 100; ++i)
 	{
-		SleepNull();
+		SleepNull(20);
 	}
+	SleepBar();
 
 
 	return 1;

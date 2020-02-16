@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ACT.cpp" />
+    <ClCompile Include="ASCIIArt.cpp" />
     <ClCompile Include="Basic.cpp" />
     <ClCompile Include="FileReadWrite.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -146,6 +148,8 @@
     <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ACT.hpp" />
+    <ClInclude Include="ASCIIArt.hpp" />
     <ClInclude Include="Basic.hpp" />
     <ClInclude Include="FileReadWrite.hpp" />
     <ClInclude Include="Game.hpp" />

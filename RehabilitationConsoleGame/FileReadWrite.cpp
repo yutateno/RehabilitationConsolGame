@@ -27,7 +27,6 @@ namespace FRW
 		// マップデータ読み込み失敗
 		if (writeFile.fail())
 		{
-			std::cerr << "LoadError" << std::endl;
 			return false;
 		}
 

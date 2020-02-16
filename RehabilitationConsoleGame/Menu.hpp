@@ -1,6 +1,6 @@
 #pragma once
 #include "Basic.hpp"
-
+#include "ASCIIArt.hpp"
 
 
 class Menu
