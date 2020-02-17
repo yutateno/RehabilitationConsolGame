@@ -122,7 +122,7 @@ void Game::Update()
 		SleepNull();
 		SleepCout("ということで さいころを 振るね");
 		SleepNull();
-		SleepCout("今から さいころ という名の 乱数(0~6)が 100個ほど 常に動くから SPACE を 押して 決めてね");
+		SleepCout("今から さいころ という名の 乱数(1~6)が 100個ほど 常に動くから SPACE を 押して 決めてね");
 		SleepCout("cinで 無理やり止めてるから 適当な文字入れて Enterを 押したら 始まるよ");
 		std::string tre = "";
 		std::cin >> tre;
@@ -139,7 +139,7 @@ void Game::Update()
 				m_dice[i] = 0;
 				std::random_device rnd;     // 非決定的な乱数生成器を生成
 				std::mt19937 mt(rnd());     //  メルセンヌ・ツイスタの32ビット版、引数は初期シード値
-				std::uniform_int_distribution<> rand06(0, 6);        // [0, 5] 範囲の一様乱数
+				std::uniform_int_distribution<> rand06(1, 6);        // [0, 5] 範囲の一様乱数
 				m_dice[i] = rand06(mt);
 				std::cout << m_dice[i] << " ";
 				Sleep(10);
